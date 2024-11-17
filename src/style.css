@@ -1,0 +1,62 @@
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  }
+  
+  @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+  }
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }
+
+  .square-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px; /* Ajusta el tamaño según prefieras */
+    border-radius: 8px; /* Puedes ajustar el redondeo aquí */
+    background-color: #f8f9fa; /* Cambia el color de fondo */
+    border: 1px solid #ddd; /* Borde opcional */
+  }
+  
+  .square-btn p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .btn-outline-primary:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    background-color: #007bff; /* Cambia el fondo a azul más fuerte */
+    color: #fff; /* Cambia el texto a blanco */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4); /* Añade un resplandor */
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn-danger:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    background-color: #dc3545; /* Cambia el fondo a rojo más fuerte */
+    color: #fff; /* Cambia el texto a blanco */
+    box-shadow: 0px 4px 10px rgba(220, 53, 69, 0.4); /* Añade un resplandor */
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .MDBCardBody:hover {
+    transform: scale(1.03); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.3); /* Añade un resplandor alrededor */
+    background-color: rgba(0, 123, 255, 0.1); /* Cambia el fondo ligeramente para resaltar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+    
