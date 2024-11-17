@@ -25,7 +25,7 @@ const AdminTest = () => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const response = await fetch(`https://cbc4-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/${cuestionarioId}`, requestOptions);
+    const response = await fetch(`https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/${cuestionarioId}`, requestOptions);
     const data = await response.json();
 
     if (!response.ok) {
@@ -114,7 +114,7 @@ Gracias.`;
       body: JSON.stringify({ resultados: generatedText, id_admin: id, id_cuestionario: cuestionarioId }),
     };
 
-    const resultResponse = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarPrueba/`, requestOptions);
+    const resultResponse = await fetch(`https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarPrueba/`, requestOptions);
     const data = await resultResponse.json();
 
     if (!response.ok) {
