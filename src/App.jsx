@@ -20,6 +20,7 @@ const App = () => {
   return (
     <Router>    
         <Routes>
+          <Route path="/" element={<Login/>} />
           <Route path="/login" element = {<Login/>}>
           </Route>
           <Route path="/adminlogin" element = {<AdminLogin/>}>
