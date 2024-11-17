@@ -19,7 +19,7 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/token/", requestOptions);
+      const response = await fetch("https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/token/", requestOptions);
       const data = await response.json();
 
       if (!response.ok) {

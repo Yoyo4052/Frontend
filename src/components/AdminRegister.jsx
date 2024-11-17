@@ -18,7 +18,7 @@ const AdminRegister = () => {
         body: JSON.stringify({ nickname: nickname, contrasena: password }),
       };
 
-      const response = await fetch("http://127.0.0.1:8000/registrarAdmin/", requestOptions);
+      const response = await fetch("https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarAdmin/", requestOptions);
       
       let data;
       try {
