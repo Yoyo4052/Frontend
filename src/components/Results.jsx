@@ -16,7 +16,7 @@ const Results = () => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const response = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verResultados/${id}/`, requestOptions);
+    const response = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verResultados/${id}/`, requestOptions);
     const data = await response.json();
 
     if (!response.ok) {
@@ -44,7 +44,7 @@ const Results = () => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const response = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/EliminarResultado/${resultado_id}/`, requestOptions);
+    const response = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/EliminarResultado/${resultado_id}/`, requestOptions);
     const data = await response.json();
 
     if (!response.ok) {

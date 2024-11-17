@@ -19,7 +19,7 @@ const Questions = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/${cuestionarioId}`);
+      const response = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/${cuestionarioId}`);
       const data = await response.json();
       if (response.ok) {
         setQuestions(data.preguntas);
@@ -114,7 +114,7 @@ const Questions = () => {
       body: JSON.stringify({ resultados: generatedText, id_usuario: id, id_cuestionario: cuestionarioId }),
     };
 
-    const resultResponse = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarResultadoFODA/`, requestOptions);
+    const resultResponse = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarResultadoFODA/`, requestOptions);
     const data = await resultResponse.json();
 
     setIsLoading(false); // Detiene el estado de carga

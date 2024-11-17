@@ -34,7 +34,7 @@ const Register = () => {
         body: JSON.stringify({ nickname, correo: email, contrasena: password, codigo: 0 }),
       };
 
-      const response = await fetch("https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarUsers/", requestOptions);
+      const response = await fetch("https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarUsers/", requestOptions);
       const data = await response.json();
 
       if (!response.ok) {

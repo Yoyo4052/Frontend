@@ -29,7 +29,7 @@ const Predict = () => {
   }, [isLoading]);
 
   const getQuestions = async () => {
-    const response = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/6`);
+    const response = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/6`);
     const data = await response.json();
 
     if (response.ok) {
@@ -60,13 +60,13 @@ const Predict = () => {
         })
       };
 
-      const response = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarRespuestas/`, requestOptions);
+      const response = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarRespuestas/`, requestOptions);
       if (!response.ok) {
         console.error("Error:", await response.json());
       }
     }
 
-    const resultResponse = await fetch(`https://3708-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/gemini/${id}/`);
+    const resultResponse = await fetch(`https://99c1-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/gemini/${id}/`);
     const resultData = await resultResponse.json();
     if (resultResponse.ok) {
       setResultado(resultData);
