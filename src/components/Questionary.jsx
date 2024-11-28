@@ -19,7 +19,7 @@ function Questionary({ cuestionario , setShowEdit, descCuestionario, handleDescC
       body: JSON.stringify({ descripcion: descCuestionario, preguntas: cuestionario.preguntas, id: cuestionario.id, resultados: cuestionario.resultados}),
     };
 
-    const response = await fetch(`https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/CambiarCuestionario/${cuestionario.id}`, requestOptions);
+    const response = await fetch(`https://back-rendimiento-estudiantes.onrender.com/CambiarCuestionario/${cuestionario.id}`, requestOptions);
     const data = await response.json();
 
     if (!response.ok) {
@@ -36,7 +36,7 @@ function Questionary({ cuestionario , setShowEdit, descCuestionario, handleDescC
       body: JSON.stringify({ id_cuestionario: cuestionario.id, pregunta: questionText, tipo: "FODA"}),
     };
 
-    const response = await fetch("https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarPregunta/", requestOptions);
+    const response = await fetch("https://back-rendimiento-estudiantes.onrender.com/registrarPregunta/", requestOptions);
     const data = await response.json();
 
     if (!response.ok) {
@@ -55,7 +55,7 @@ function Questionary({ cuestionario , setShowEdit, descCuestionario, handleDescC
       headers: { "Content-Type": "application/json" },
     };
 
-    const response = await fetch(`https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/EliminarPregunta/${pregunta_id}/`, requestOptions);
+    const response = await fetch(`https://back-rendimiento-estudiantes.onrender.com/EliminarPregunta/${pregunta_id}/`, requestOptions);
     const data = await response.json();
 
     if (!response.ok) {

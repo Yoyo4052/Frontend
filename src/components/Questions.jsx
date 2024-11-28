@@ -15,11 +15,11 @@ const Questions = () => {
   const [isLoading, setIsLoading] = useState(false); // Estado para manejo de carga
   const location = useLocation();
   const cuestionarioId = new URLSearchParams(location.search).get("id");
-  const genAI = new GoogleGenerativeAI('AIzaSyBOiy67W-3C1VopAvsaqvEnKWJ_sd0AHQA');
+  const genAI = new GoogleGenerativeAI('AIzaSyAam0Dijv-W-ryrl_fuJN6ZP9hPjUHbuuM');
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch(`https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/verCuestionario/${cuestionarioId}`);
+      const response = await fetch(`https://back-rendimiento-estudiantes.onrender.com/verCuestionario/${cuestionarioId}`);
       const data = await response.json();
       if (response.ok) {
         setQuestions(data.preguntas);
@@ -70,6 +70,12 @@ const Questions = () => {
     const prompt = `Por favor, genérame un análisis FODA (Fortalezas, Oportunidades, Debilidades, Amenazas) en base a las siguientes preguntas y respuestas:
     ${questionanswers}
     
+    Se está utilizando la escala siguiente para las respuestas:
+
+   5 (Muy de acuerdo) 4 (De acuerdo) 3 (Neutro) 2 (En desacuerdo) 1 (Muy en desacuerdo)
+  
+   Tienes que ser lo más objetivo posible, no importa si el resultado es bueno o malo.
+
     El análisis debe estar estructurado de la siguiente manera:
 
     1. Usa "Fortalezas:", "Oportunidades:", "Debilidades:" y "Amenazas:" como encabezados claros.
@@ -114,7 +120,7 @@ const Questions = () => {
       body: JSON.stringify({ resultados: generatedText, id_usuario: id, id_cuestionario: cuestionarioId }),
     };
 
-    const resultResponse = await fetch(`https://b14d-2806-2f0-21c0-fd27-dd43-6331-feef-454d.ngrok-free.app/registrarResultadoFODA/`, requestOptions);
+    const resultResponse = await fetch(`https://back-rendimiento-estudiantes.onrender.com/registrarResultadoFODA/`, requestOptions);
     const data = await resultResponse.json();
 
     setIsLoading(false); // Detiene el estado de carga
